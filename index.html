@@ -1,0 +1,871 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio | Alfia Dewi Ariani</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Raleway', sans-serif;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+  background: linear-gradient(180deg, #fff 0%, #f3e8ff 50%, #ede9fe 100%);
+  color: #6b4c8a;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Navbar */
+header {
+  background: linear-gradient(135deg, #d8b4f8 0%, #c9a6f0 50%, #b794f6 100%);
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.2);
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+nav h1 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  animation: slideInDown 0.6s ease-out;
+  white-space: nowrap;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.5px;
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideInRight 0.6s ease-out;
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  animation: slideInUp 0.6s ease-out;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section */
+section {
+  padding: 100px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: #7c3aed;
+  font-weight: 800;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  padding-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #d8b4f8 0%, #a78bfa 100%);
+  border-radius: 2px;
+}
+
+p {
+  font-size: 16px;
+  color: #6b4c8a;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+/* Beranda */
+#beranda {
+  background: linear-gradient(135deg, #d8b4f8 0%, #e9d5ff 50%, #f3e8ff 100%);
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+#beranda h2 {
+  color: #7c3aed;
+  font-size: 44px;
+  margin-bottom: 32px;
+  animation: fadeInDown 0.8s ease-out;
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+#beranda h2::after {
+  display: none;
+}
+
+#beranda p {
+  color: #6b4c8a;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.8;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.card {
+  background: linear-gradient(135deg, #fff 0%, #f3e8ff 100%);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(217, 70, 239, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
+  border-color: rgba(217, 70, 239, 0.4);
+}
+
+.card h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #7c3aed;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.3px;
+}
+
+/* Skill */
+.skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #6b4c8a;
+  font-weight: 600;
+  gap: 16px;
+}
+
+.skill span:first-child {
+  min-width: 120px;
+}
+
+.progress {
+  background: #e9d5ff;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 10px;
+  flex: 1;
+  margin-bottom: 8px;
+}
+
+.progress div {
+  height: 100%;
+  background: linear-gradient(90deg, #d8b4f8 0%, #a78bfa 100%);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+  animation: progressFill 1s ease-out forwards;
+}
+
+@keyframes progressFill {
+  from {
+    width: 0 !important;
+  }
+}
+
+/* Kontak */
+.contact-info p {
+  margin-bottom: 8px;
+  color: #6b4c8a;
+}
+
+/* Tentang Section */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.about-photo {
+  flex-shrink: 0;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.about-photo img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 4px solid #d8b4f8;
+  box-shadow: 0 20px 50px rgba(168, 85, 247, 0.25);
+  transition: all 0.3s ease;
+}
+
+.about-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 60px rgba(168, 85, 247, 0.35);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  animation: slideInRight 0.8s ease-out;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 2;
+  color: #6b4c8a;
+  margin-bottom: 20px;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .about-photo img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Certificate Card */
+.cert-card {
+  background: linear-gradient(135deg, #fff 0%, #f3e8ff 100%);
+  padding: 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(217, 70, 239, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(168, 85, 247, 0.25);
+  border-color: rgba(217, 70, 239, 0.4);
+}
+
+.cert-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cert-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #d8b4f8;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-image img {
+  transform: scale(1.08);
+}
+
+.cert-name {
+  padding: 20px 16px;
+  text-align: center;
+  color: #7c3aed;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Social Media Cards */
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.social-card {
+  background: linear-gradient(135deg, #fff 0%, #f3e8ff 100%);
+  padding: 32px 24px;
+  border-radius: 16px;
+  border: 2px solid rgba(217, 70, 239, 0.3);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  max-width: 280px;
+}
+
+.social-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(168, 85, 247, 0.3);
+  border-color: rgba(217, 70, 239, 0.6);
+}
+
+.social-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+.instagram-card .social-icon {
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #fff;
+  font-size: 40px;
+  box-shadow: 0 8px 25px rgba(240, 148, 51, 0.3);
+}
+
+.instagram-card:hover .social-icon {
+  transform: rotateY(360deg) scale(1.1);
+  animation: instagramPulse 0.6s ease;
+  box-shadow: 0 12px 35px rgba(240, 148, 51, 0.5);
+}
+
+.email-card .social-icon {
+  background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+  color: #fff;
+  font-size: 36px;
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+}
+
+.email-card:hover .social-icon {
+  transform: scale(1.1);
+  animation: emailBounce 0.6s ease;
+  box-shadow: 0 12px 35px rgba(124, 58, 237, 0.5);
+}
+
+.social-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #7c3aed;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.3px;
+}
+
+.social-card:hover .social-name {
+  color: #a78bfa;
+}
+
+.social-text {
+  font-size: 13px;
+  color: #6b4c8a;
+  margin: 4px 0 0 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-weight: 500;
+}
+
+.social-card:hover .social-text {
+  opacity: 1;
+}
+}
+
+@keyframes instagramPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(240, 148, 51, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(240, 148, 51, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(240, 148, 51, 0);
+  }
+}
+
+@keyframes emailBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1) translateY(-5px);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1.1) translateY(5px);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 32px 20px;
+  background: linear-gradient(135deg, #d8b4f8 0%, #c9a6f0 50%, #b794f6 100%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  nav ul {
+    gap: 20px;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
+  
+  #beranda h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    gap: 12px;
+  }
+  
+  nav h1 {
+    font-size: 18px;
+  }
+  
+  nav ul {
+    gap: 16px;
+    justify-content: flex-start;
+    flex: 1;
+  }
+  
+  nav ul li a {
+    font-size: 13px;
+  }
+  
+  section {
+    padding: 80px 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  #beranda {
+    padding: 80px 20px;
+  }
+  
+  #beranda h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  #beranda p {
+    font-size: 16px;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .about-container {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  
+  .about-photo img {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .about-text {
+    min-width: 100%;
+  }
+  
+  .about-text p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  
+  .social-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .social-card {
+    padding: 28px 20px;
+    min-height: 180px;
+  }
+  
+  .social-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  
+  .instagram-card .social-icon {
+    font-size: 30px;
+  }
+  
+  .email-card .social-icon {
+    font-size: 28px;
+  }
+  
+  .social-name {
+    font-size: 16px;
+  }
+  
+  .cert-card {
+    border-radius: 12px;
+  }
+  
+  .cert-image {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 16px;
+  }
+  
+  nav ul {
+    gap: 12px;
+  }
+  
+  nav ul li a {
+    font-size: 12px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  h2::after {
+    width: 40px;
+  }
+  
+  #beranda h2 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-size: 15px;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .about-photo img {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .skill {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .progress {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+  </style>
+</head>
+<body>  <!-- Navbar -->  <header>
+    <nav>
+      <h1>Portofolio</h1>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang Saya</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#sertifikat">Sertifikat</a></li>
+        <li><a href="#pendidikan">Pendidikan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <div class="nav-profile">
+        <img src="pict.jpeg" alt="Foto Profil" class="profile-photo">
+      </div>
+    </nav>
+  </header>  <!-- Beranda -->  <section id="beranda">
+    <div class="container">
+      <h2>Halo, saya Alfia Dewi Ariani</h2>
+      <p>Saya pelajar yang tertarik pada dunia teknologi dan desain, dengan fokus pada web development dan graphic design.</p>
+    </div>
+  </section>  <!-- Tentang Saya -->  <section id="tentang">
+    <div class="container">
+      <h2>Tentang Saya</h2>
+      <div class="about-container">
+        <div class="about-photo">
+          <img src="pict.jpeg" alt="Foto Alfia Dewi Ariani">
+        </div>
+        <div class="about-text">
+          <p>Saya memiliki ketertarikan di bidang teknologi dan kreatif, khususnya web development dan graphic design, dengan fokus pada pembuatan tampilan visual yang rapi, komunikatif, dan menarik.</p>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Skill -->  <section id="skill">
+    <div class="container">
+      <h2>Skill</h2>
+      <div class="card">
+        <div class="skill"><span>HTML & CSS</span><span>80%</span></div>
+        <div class="progress"><div style="width:80%"></div></div>
+        <br>
+        <div class="skill"><span>Graphic Design</span><span>85%</span></div>
+        <div class="progress"><div style="width:85%"></div></div>
+        <br>
+        <div class="skill"><span>PHP</span><span>70%</span></div>
+        <div class="progress"><div style="width:70%"></div></div>
+        <br>
+        <div class="skill"><span>UI Design</span><span>75%</span></div>
+        <div class="progress"><div style="width:75%"></div></div>
+        <br>
+    </div>
+  </section>  <!-- Sertifikat -->  <section id="sertifikat">
+    <div class="container">
+      <h2>Sertifikat</h2>
+      <div class="grid">
+        <div class="cert-card">
+          <div class="cert-image">
+            <img src="sertifikat.jpeg" alt="Sertifikat Perkemahan">
+          </div>
+          <div class="cert-name">Sertifikat Perkemahan</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-image">
+            <img src="sertifikat1.jpeg" alt="Sertifikat Pramuka">
+          </div>
+          <div class="cert-name">Sertifikat Pramuka</div>
+        </div>
+    </div>
+  </section>  <!-- Pendidikan -->  <section id="pendidikan">
+    <div class="container">
+      <h2>Pendidikan</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>SMKN 2 KOTA BEKASI</h3>
+          <p>2023-2026</p>
+        </div>
+        <div class="card">
+          <h3>SMPI NURUL HUDA</h3>
+          <p>2020-2023</p>
+        </div>
+        <div class="card">
+          <h3>MI ZIYADATUL AHSAN</h3>
+          <p>2014-2020</p>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- Kontak -->  <section id="kontak">
+    <div class="container">
+      <h2>Kontak</h2>
+      <div class="social-container">
+        <a href="https://instagram.com/arianiialfia" target="_blank" class="social-card instagram-card">
+          <span class="social-icon">📸</span>
+          <div class="social-name">Instagram</div>
+          <div class="social-text">Kunjungi saya di Instagram</div>
+        </a>
+        <a href="mailto:alfia@email.com?subject=Halo Alfia&body=Saya ingin menghubungi Anda. " class="social-card email-card">
+          <span class="social-icon">✉️</span>
+          <div class="social-name">Email</div>
+          <div class="social-text">dewiarianialfia@email.com</div>
+        </a>
+      </div>
+    </div>
+  </section>  <footer>
+    © 2026 Alfia Dewi Ariani. All rights reserved.
+  </footer></body>
+</html>
